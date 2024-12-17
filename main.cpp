@@ -15,9 +15,9 @@
 
 #define FRAMECOLOR CLITERAL(Color){166, 165, 201, 255}
 #define LINESCOLOR CLITERAL(Color){106, 105, 141, 255}
-// #if defined(PLATFORM_WEB)
-//     #include <emscripten/emscripten.h>
-// #endif
+
+#include <vector>
+#include <array>
 
 void drawFrameLines();
 void drawCircles(int mouseX, int mouseY);

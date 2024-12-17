@@ -75,7 +75,7 @@ bool ConnectFour::isWin(char token){
     //checks rows for a win
     for(int row = 0; row < HEIGHT; row++){
     for(int col = 0; col < WIDTH; col++){
-        if(board[row][col] == token){
+        if(board.at(row).at(col) == token){
         counter++;
         if(counter >= 4){
             return true;
@@ -170,10 +170,10 @@ bool ConnectFour::isLegalMove(int col){
 void ConnectFour::printBoard() {
     std::cout << " 1  2  3  4  5  6  7" << std::endl;
     for(int row = 0; row < HEIGHT; row++){
-    for(int col = 0; col < WIDTH; col++){
-        std::cout << " " << board[row][col] << " ";
-    }
-    std::cout << std::endl;
+        for(int col = 0; col < WIDTH; col++){
+            std::cout << " " << board[row][col] << " ";
+        }
+        std::cout << std::endl;
     }
 }
 

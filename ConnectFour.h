@@ -44,14 +44,14 @@ class ConnectFour{
         u_int64_t getPosition(u_int64_t currentPlayer, u_int64_t mask);
         static bool isWin(u_int64_t pos);
 
-        // ConnectFour(/*size_t tableSize = 1 << 20) : transpositionTable(tableSize*/){
-        //     for(int row = 0; row < HEIGHT; row++){
-        //         board.push_back({});
-        //         for(int col = 0; col < WIDTH; col++){
-        //             board[row].push_back('.');
-        //         }
-        //     }
-        // }
+        ConnectFour(){
+            for(int row = 0; row < HEIGHT; row++){
+                board.push_back({});
+                for(int col = 0; col < WIDTH; col++){
+                    board[row].push_back('.');
+                }
+            }
+        }
 
         ~ConnectFour(){};
 };
