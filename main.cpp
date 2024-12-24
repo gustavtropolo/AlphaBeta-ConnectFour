@@ -57,7 +57,7 @@ int main() {
                 game.printBoard();
                 std::cout << std::endl;
             } else if (!isPlayerTurn) {
-                game.makeMove(game.getAImove(), true);
+                game.makeMove(game.getAImove());
                 game.printBoard();
                 isPlayerTurn = true;
             }
@@ -131,7 +131,7 @@ void makeMove(int mouseX, int mouseY) {
             }
         }
     if (game.isLegalMove(column)) {
-        game.makeMove(column, false);
+        game.makeMove(column);
         isPlayerTurn = false;
     }
 }
@@ -160,10 +160,3 @@ void checkForWin() {
         DrawText("Press R to restart or ESC to exit.", posX, posY, size, DARKGRAY);
     }
 }
-
-
-////////////// TESTS \\\\\\\\\\\\\\\\\\\\
-
-// void isWinTest() {
-//     UINT64_C pos = 
-// }

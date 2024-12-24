@@ -2,9 +2,25 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "build debug",
+            "label": "build practice",
             "type": "shell",
             "command": "clang++",
+            "args": [
+                "-std=c++17",
+                "practice.cpp",
+                "-o",
+                "practice"
+            ],
+            "group": "build",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Build task for practice.cpp with clang++."
+        },
+        {
+            "label": "build debug",
+            "type": "shell",
+            "command": "/usr/bin/clang++",
             "args": [
                 "-std=c++11",
                 "main.cpp",
@@ -43,12 +59,27 @@
             "detail": "Build task for release C++ project with Raylib."
         },
         {
+            "label": "build active file",
+            "type": "shell",
+            "command": "clang++",
+            "args": [
+                "-std=c++17",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}"
+            ],
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build",
+            "detail": "Build task for the active file"
+        },
+        {
             "type": "cppbuild",
             "label": "C/C++: clang build active file",
-            "command": "/usr/bin/clang",
+            "command": "clang++",
             "args": [
-                "-fcolor-diagnostics",
-                "-fansi-escape-codes",
+                "-std=c++17",
                 "-g",
                 "${file}",
                 "-o",

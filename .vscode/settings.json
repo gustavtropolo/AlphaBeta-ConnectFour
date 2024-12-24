@@ -1,4 +1,7 @@
 {
+	"C_Cpp.default.cppStandard": "c++17", // Ensure IntelliSense is aware of the standard
+    "C_Cpp.default.compilerPath": "/usr/bin/clang++", // Explicitly point to clang++
+    "C_Cpp.default.compileCommands": "${workspaceFolder}/compile_commands.json", // Optional: For complex projects
 	"files.exclude": {
 		"**/.git": true,
 		"**/.svn": true,
@@ -57,6 +60,7 @@
 		"tuple": "cpp",
 		"typeinfo": "cpp",
 		"variant": "cpp",
-		"algorithm": "cpp"
-	}
+		"algorithm": "cpp",
+		"any": "cpp"
+	},
 }

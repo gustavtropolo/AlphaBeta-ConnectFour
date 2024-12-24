@@ -1,6 +1,26 @@
 {
   "version": "0.2.0",
   "configurations": [
+    {
+        "name": "Debug C/C++ File",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${fileDirname}/${fileBasenameNoExtension}",
+        "args": [],
+        "stopAtEntry": false,
+        "cwd": "${fileDirname}",
+        "environment": [],
+        "externalConsole": false,
+        "preLaunchTask": "build active file",
+        "MIMode": "lldb",
+        "setupCommands": [
+            {
+                "description": "Enable pretty-printing for lldb",
+                "text": "-enable-pretty-printing",
+                "ignoreFailures": false
+            }
+        ]
+    },
       {
           "name": "Debug",
           "type": "cppdbg",
@@ -44,10 +64,33 @@
                   "ignoreFailures": false
               }
           ],
-          "miDebuggerPath": "/usr/bin/lldb",
+          "miDebuggerPath": "/usr/local/opt/llvm/bin/lldb-mi",
           "logging": {
               "engineLogging": true
           }
-      }
+      },
+      {
+        "name": "RunPractice",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceFolder}/practice",
+        "args": [],
+        "stopAtEntry": false,
+        "cwd": "${workspaceFolder}",
+        "environment": [],
+        "externalConsole": false,
+        "preLaunchTask": "build practice",
+        "MIMode": "lldb",
+        "setupCommands": [
+            {
+                "description": "Enable pretty-printing for lldb",
+                "text": "-enable-pretty-printing",
+                "ignoreFailures": false
+            }
+        ],
+        "logging": {
+            "engineLogging": true
+        }
+    }
   ]
 }
